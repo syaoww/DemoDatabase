@@ -11,9 +11,15 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
+    // start version with 1 and it will increment by 1 when db schema changes
+    private static final int DATABASE_VER = 1;
+    // filename of database
+    private static final String DATABASE_NAME = "tasks.db";
 
-
-
+    private static final String TABLE_TASK = "task";
+    private static final String COLUMN_ID = "_id";
+    private static final String COLUMN_DESCRIPTION = "description";
+    private static final String COLUMN_DATE = "date";
 
     public DBHelper(Context context) {
 
